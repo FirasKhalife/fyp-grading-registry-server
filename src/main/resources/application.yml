@@ -1,0 +1,18 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    healthcheck:
+      enabled: true
+  server:
+    enable-self-preservation: true
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+
+spring:
+  application:
+    name: eureka-server
