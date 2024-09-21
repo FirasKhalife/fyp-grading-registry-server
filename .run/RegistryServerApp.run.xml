@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="RegistryServerApp" type="Application" factoryName="Application">
+    <option name="ALTERNATIVE_JRE_PATH" value="17" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <envs>
+      <env name="SPRING_PROFILES_ACTIVE" value="dev" />
+      <env name="SPRING_APPLICATION_NAME" value="registry-server" />
+      <env name="BUILD_VERSION" value="1.0" />
+      <env name="PORT" value="8761" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.fypgrading.registryserver.RegistryServerApplication" />
+    <module name="registry-server" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

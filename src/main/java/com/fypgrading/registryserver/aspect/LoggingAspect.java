@@ -1,4 +1,4 @@
-package com.fypgrading.eurekaService.logging;
+package com.fypgrading.registryserver.aspect;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -33,9 +33,7 @@ public class LoggingAspect {
      * Pointcut that matches all Spring beans in the application's main packages.
      */
     @Pointcut(
-            "within(com.fypgrading.adminservice.repository..*)" +
-                    " || within(com.fypgrading.adminservice.service..*)" +
-                    " || within(com.fypgrading.adminservice.controller..*)"
+            "within(com.fypgrading.registryserver..*)"
     )
     public void applicationPackagePointcut() {
         // Method is empty as this is just a Pointcut, the implementations are in the advices.
