@@ -38,6 +38,9 @@ management:
       enabled: true
     livenessstate: # /actuator/health/liveness
       enabled: true
+  metrics:
+    tags:
+      application: ${SPRING_APPLICATION_NAME}
 
 eureka:
   instance:
