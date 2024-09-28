@@ -48,7 +48,7 @@ eureka:
     lease-renewal-interval-in-seconds: 30
     lease-expiration-duration-in-seconds: 90
   client:
-    register-with-eureka: true
+    register-with-eureka: false
     fetch-registry: false
     healthcheck:
       enabled: true
