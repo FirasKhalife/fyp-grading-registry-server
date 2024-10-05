@@ -1,4 +1,4 @@
-package com.fypgrading.eurekaService;
+package com.fypgrading.registryserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,9 +6,9 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @EnableEurekaServer
 @SpringBootApplication
-public class ServiceRegistryApplication {
+public class RegistryServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ServiceRegistryApplication.class,
+        SpringApplication.run(RegistryServerApplication.class,
                 args);
     }
 }
