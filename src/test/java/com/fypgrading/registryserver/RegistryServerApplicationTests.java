@@ -16,7 +16,9 @@ class RegistryServerApplicationTests {
     @Test
     void servesTheRegistryAndKeepsActuatorClosed() {
         RestClient http = RestClient.create("http://localhost:" + port);
-        Integer apps = http.get().uri("/eureka/apps").header("Accept", "application/json")
+        Integer apps = http.get()
+                .uri("/eureka/apps")
+                .header("Accept", "application/json")
                 .exchange((req, res) -> res.getStatusCode().value());
         assertThat(apps).isEqualTo(200);
         assertThat(status(http, "/actuator/health")).isEqualTo(200);
@@ -25,7 +27,8 @@ class RegistryServerApplicationTests {
     }
 
     private static int status(RestClient http, String path) {
-        Integer code = http.get().uri(path).exchange((req, res) -> res.getStatusCode().value());
+        Integer code =
+                http.get().uri(path).exchange((req, res) -> res.getStatusCode().value());
         return code == null ? -1 : code;
     }
 }
